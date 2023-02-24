@@ -3,7 +3,8 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+class ListExamples implements StringChecker {
+public boolean checkString(String s){ return "bye" == s;}
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
@@ -40,7 +41,7 @@ class ListExamples {
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index1 += 1;
+      index2 += 1;
     }
     return result;
   }
